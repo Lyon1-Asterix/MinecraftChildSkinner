@@ -1,0 +1,3 @@
+/home/hakkahi/Documents/Hackerspace/Minecraft Child Skinner/build/CMakeFiles/rebuild_cache.dir
+/home/hakkahi/Documents/Hackerspace/Minecraft Child Skinner/build/CMakeFiles/edit_cache.dir
+/home/hakkahi/Documents/Hackerspace/Minecraft Child Skinner/build/CMakeFiles/Video.dir

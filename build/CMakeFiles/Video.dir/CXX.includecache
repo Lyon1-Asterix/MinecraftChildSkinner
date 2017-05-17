@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hakkahi/Documents/Hackerspace/Minecraft Child Skinner/src/video.cpp
+iostream
+-
+opencv2/core/core.hpp
+/home/hakkahi/Documents/Hackerspace/Minecraft Child Skinner/src/opencv2/core/core.hpp
+opencv2/highgui/highgui.hpp
+/home/hakkahi/Documents/Hackerspace/Minecraft Child Skinner/src/opencv2/highgui/highgui.hpp
+opencv2/imgproc/imgproc.hpp
+/home/hakkahi/Documents/Hackerspace/Minecraft Child Skinner/src/opencv2/imgproc/imgproc.hpp
+string
+-
+sstream
+-
+
