@@ -3,7 +3,7 @@
 
 int main(int argc, char ** argv)
 {
-    VideoCapture backgroundCap("Data/out.avi");
+    VideoCapture backgroundCap("../Data/out.avi");
 
     if ( !backgroundCap.isOpened())
     {
@@ -20,7 +20,7 @@ int main(int argc, char ** argv)
 
     backgroundLearning(backgroundCap, mog, 300);
 
-    VideCapture cameraCap(1);
+    VideoCapture cameraCap(1);
 
     double fps = cameraCap.get(CV_CAP_PROP_FPS);
     int wait = 1000 / fps;
@@ -33,7 +33,7 @@ int main(int argc, char ** argv)
 
     while(true)
     {
-        bool bSuccess = cap.read(frame);
+        bool bSuccess = cameraCap.read(frame);
 
         if (!bSuccess)
         {
@@ -46,10 +46,14 @@ int main(int argc, char ** argv)
         frame.copyTo(frameWithoudFoground, mogThreshold);
 
         imshow("frameWithoudFoground", frameWithoudFoground);
+        frameWithoudFoground = Mat();
 
         if(waitKey(wait) == 27)
         {
             break;
         }
     }
+
+    cameraCap.release();
+    backgroundCap.release();
 }

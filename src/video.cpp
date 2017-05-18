@@ -27,28 +27,20 @@ int main( int argc, char** argv )
     std::cout << "Enregistrement du fond" << std::endl;
 
     Mat frame;
-
-    for(int i = 0; i < 360; ++i)
+    for(int i = 0; i < 60; ++i)
+    {
+        std::cout << "Licorne" << std::endl;
+    }
+    
+    for(int i = 0; i < 300; ++i)
     {
 
         vcap >> frame;
         video.write(frame);
     }
 
-    std::cout << " Vous pouvez y aller les lapins, YOLO " << vcap.get(CV_CAP_PROP_FPS) << std::endl;
-
-
-    for(int i = 0; i < 3000; ++i)
-    {
-
-        vcap >> frame;
-        video.write(frame);
-
-        if(waitKey(33) == 27)
-        {
-            break;
-        }
-    }
+    video.release();
+    vcap.release();
 
     return EXIT_SUCCESS;
 }
